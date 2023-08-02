@@ -23,6 +23,9 @@ public class Likes {
 
 	// Getters et Setters (à générer ou écrire manuellement)
 	
+	public Likes () {
+	}
+	
 	public Long getId_user() {
 		return id_user;
 	}

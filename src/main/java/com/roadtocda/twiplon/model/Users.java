@@ -25,6 +25,9 @@ public class Users {
     @OneToMany(mappedBy = "users", cascade = CascadeType.ALL)
     private List<Post> posts;
     
+    public Users() {
+    }
+    
     public Long getId_user() {
 		return id_user;
 	}
@@ -44,8 +47,6 @@ public class Users {
 	public Date getDatecreation() {
 		return datecreation;
 	}
-
-
 
 	public void setId_user(Long id_user) {
 		this.id_user = id_user;

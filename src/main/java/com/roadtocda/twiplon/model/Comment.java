@@ -25,11 +25,8 @@ public class Comment {
 
 // Getters et Setters (à générer ou écrire manuellement)
     
-    public Comment(Long id_user, Long idpost, Post post) {
-		super();
-		this.id_user = id_user;
-		this.idpost = idpost;
-		this.post = post;
+    public Comment() {
+		
 }
     
 	public Long getId_user() {

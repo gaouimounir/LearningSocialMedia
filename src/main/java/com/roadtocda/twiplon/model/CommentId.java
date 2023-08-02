@@ -12,10 +12,7 @@ public class CommentId implements Serializable {
      
 	// constructeur, getters et setters (à générer ou écrire manuellement)
     
-    public CommentId(Long id_user, Long idpost) {
-		super();
-		this.id_user = id_user;
-		this.idpost = idpost;
+    public CommentId() {
 	}
     
 	public Long getId_user() {
