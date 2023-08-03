@@ -6,8 +6,8 @@ import java.util.Objects;
 public class CommentId implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
-	private Long id_user;
-    private Long idpost;
+	private int id_user;
+    private int idpost;
     
      
 	// constructeur, getters et setters (à générer ou écrire manuellement)
@@ -15,16 +15,16 @@ public class CommentId implements Serializable {
     public CommentId() {
 	}
     
-	public Long getId_user() {
+	public int getId_user() {
 		return id_user;
 	}
-	public void setId_user(Long id_user) {
+	public void setId_user(int id_user) {
 		this.id_user = id_user;
 	}
-	public Long getIdpost() {
+	public int getIdpost() {
 		return idpost;
 	}
-	public void setIdpost(Long idpost) {
+	public void setIdpost(int idpost) {
 		this.idpost = idpost;
 	}
 	
