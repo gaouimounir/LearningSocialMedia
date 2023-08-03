@@ -18,8 +18,12 @@
   </h1>
   <main>
     <div class="card" th:each="post : ${LesPosts}">
-       <p th:text="'Post : ' + ${post.content}"></p>
-       <p th:text="'Comment : ' + ${post.user.username}"></p>
+		
+		<p th:text="'Username : ' + ${post.user.username}"></p>
+		<p th:text="'Date : ' + ${post.user.datecreation}"></p>
+		<p th:text="'Post : ' + ${post.content}"></p>
+		<p th:text="'Like : ' + ${post.likes}"></p>
+       
      
      
     </div>
