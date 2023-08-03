@@ -14,11 +14,11 @@ public class PostController {
 	@Autowired
 	private PostService PostService;
 	
-	@GetMapping("/Post")
+	@GetMapping("")
     public String Post(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
 		model.addAttribute("name", name);
 		model.addAttribute("LesPosts", PostService.getPosts());
-        return "post";
+        return "index";
     }
 
 }
