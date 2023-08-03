@@ -21,7 +21,7 @@ public class Post {
     private String content;
     
     @Column(columnDefinition = "DATE")
-    private Timestamp Timestampcreation;
+    private Timestamp datecreation;
 
     // Clé étrangère vers l'utilisateur qui a créé la publication
     @ManyToOne
@@ -56,12 +56,12 @@ public class Post {
 		this.content = content;
 	}
 
-	public Timestamp getTimestampcreation() {
-		return Timestampcreation;
+	public Timestamp getDatecreation() {
+		return datecreation;
 	}
 
-	public void setTimestampcreation(Timestamp Timestampcreation) {
-		this.Timestampcreation = Timestampcreation;
+	public void setDatecreation(Timestamp datecreation) {
+		this.datecreation = datecreation;
 	}
 
 	public Users getUser() {

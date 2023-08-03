@@ -21,11 +21,11 @@ public class Users {
     private String lastname;
     
     @Column(columnDefinition = "DATE")
-    private Timestamp Timestampcreation;
+    private Timestamp datecreation;
 
     
  // Relation One-to-Many avec les publications (un utilisateur peut avoir plusieurs publications)
-    @OneToMany(mappedBy = "users", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Post> posts;
     
     public Users() {
@@ -47,8 +47,8 @@ public class Users {
 		return lastname;
 	}
 
-	public Timestamp getTimestampcreation() {
-		return Timestampcreation;
+	public Timestamp getDatecreation() {
+		return datecreation;
 	}
 
 	public void setId_user(int id_user) {
@@ -67,8 +67,8 @@ public class Users {
 		this.lastname = lastname;
 	}
 
-	public void setTimestampcreation(Timestamp Timestampcreation) {
-		this.Timestampcreation = Timestampcreation;
+	public void setDatecreation(Timestamp datecreation) {
+		this.datecreation = datecreation;
 	}
 
 	public void setPosts(List<Post> posts) {
