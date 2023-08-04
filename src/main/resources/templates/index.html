@@ -27,8 +27,12 @@
 		<p th:text="'Post : ' + ${post.content}"></p>
 		
 		<div class="interaction">
-			
-			<p th:text="'Like : ' + ${post.likes}"></p>
+			<div th:each="comment : ${post.comments}">
+		        <p th:text="'Commentaire : ' + ${comment.text}"></p>
+		        <!-- Assuming 'likes' is an attribute of the 'Comment' class -->
+		        
+		    </div>
+		    <p th:text="'Like : ' + ${@postService.getLikesCountForPost(post.idpost)}"></p>
 		</div>
 		
 		

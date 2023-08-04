@@ -26,6 +26,9 @@ public class PostService {
 	@Autowired
 	private UsersRepository usersRepository;
 	
+	@Autowired
+	private LikesService likesService;
+	
 	public Optional<Post>getPost(final long id ){
 		return postRepository.findById(id);
 	}
@@ -44,5 +47,8 @@ public class PostService {
 	public Iterable<Post> getPost() {
 		return null;
 	}
+	public long getLikesCountForPost(Long postId) {
+        return likesService.countLikesByPostId(postId);
+    }
 
 }
