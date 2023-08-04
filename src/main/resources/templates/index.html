@@ -36,11 +36,14 @@
 		<section class="interaction">
 			
 			<div class="like">
-				<p th:text="'Like : ' + ${@postService.getLikesCountForPost(post.idpost)}"></p>
+				<p><i class="fa-regular fa-heart"></i></p>
+				<p th:text=" ${@postService.getLikesCountForPost(post.idpost)}"></p>
+				<p><i class="fa-regular fa-comment"></i></p>
 			</div>
 			
 			<div class="commentaire" th:each="comment : ${post.comments}">
-		        <p th:text="'Commentaire : ' + ${comment.text}"></p>
+				<p th:text=" ${@usersService.getUsers(comment.id_user).get().getUsername} + ':'"></p>
+		        <p th:text=" ${comment.text}"></p>
 		    </div>
 		    
 		</section>

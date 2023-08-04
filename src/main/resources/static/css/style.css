@@ -43,3 +43,21 @@ main{
 	border-top: solid;
 	padding: 3%;
 }
+
+.like{
+	display: flex;
+	flex-direction: row;
+}
+
+.like p{
+	margin: 1%;
+}
+
+.commentaire{
+	display: flex;
+	flex-direction: row;
+}
+
+.commentaire p{
+	margin: 1%;
+}
