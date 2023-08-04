@@ -17,16 +17,22 @@
     Les Posts
   </h1>
   <main>
-    <div class="card" th:each="post : ${LesPosts}">
+    <article class="card" th:each="post : ${LesPosts}">
 		
-		<p th:text="'Username : ' + ${post.user.username}"></p>
-		<p th:text="'Date : ' + ${post.user.datecreation}"></p>
+    	<div class="intitule">
+			<p th:text="'Username : ' + ${post.user.username}"></p>
+			<p th:text="'Date : ' + ${post.user.datecreation}"></p>
+		</div>
+		
 		<p th:text="'Post : ' + ${post.content}"></p>
-		<p th:text="'Like : ' + ${post.likes}"></p>
-       
-     
-     
-    </div>
+		
+		<div class="interaction">
+			
+			<p th:text="'Like : ' + ${post.likes}"></p>
+		</div>
+		
+		
+    </article>
   </p>
   </main>
 </body>

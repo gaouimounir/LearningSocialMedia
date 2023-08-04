@@ -44,28 +44,5 @@ public class PostService {
 	public Iterable<Post> getPost() {
 		return null;
 	}
-	
-	//------------------
-	
-	public UsersRepository getUsersRepository() {
-		return usersRepository;
-	}
-	public void setUsersRepository(UsersRepository usersRepository) {
-		this.usersRepository = usersRepository;
-	}
-	
-	public CommentRepository getCommentRepository() {
-		return commentRepository;
-	}
-	public void setCommentRepository(CommentRepository commentRepository) {
-		this.commentRepository = commentRepository;
-	}
-	
-	public LikesRepository getLikesRepository() {
-		return likesRepository;
-	}
-	public void setLikesRepository(LikesRepository likesRepository) {
-		this.likesRepository = likesRepository;
-	}
 
 }

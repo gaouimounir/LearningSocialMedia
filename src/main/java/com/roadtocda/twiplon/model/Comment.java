@@ -14,6 +14,8 @@ public class Comment {
 
     @Id
     private int idpost;
+    
+    private String text;
 
     // Relation Many-to-One vers la publication (plusieurs commentaires sont associés à une publication)
     @ManyToOne
@@ -52,6 +54,16 @@ public class Comment {
 	public void setPost(Post post) {
 		this.post = post;
 	}
+	
+	public String getText() {
+		return text;
+	}
+	
+	public void setText(String text) {
+		this.text = text;
+	}
+
+	
 
 	
     
@@ -59,9 +71,10 @@ public class Comment {
 	
 	@Override
 	public String toString() {
-		return "Comment [id_user=" + id_user + ", idpost=" + idpost + ", post=" + post + ", getId_user()="
-				+ getId_user() + ", getIdpost()=" + getIdpost() + ", getPost()=" + getPost() + ", getClass()="
-				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+		return "Comment [id_user=" + id_user + ", idpost=" + idpost + ", text=" + text + ", post=" + post
+				+ ", getId_user()=" + getId_user() + ", getIdpost()=" + getIdpost() + ", getPost()=" + getPost()
+				+ ", getText()=" + getText() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ ", toString()=" + super.toString() + "]";
 	}
     
 }
