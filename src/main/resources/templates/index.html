@@ -38,7 +38,8 @@
 			<div class="like">
 				<p><i class="fa-regular fa-heart"></i></p>
 				<p th:text=" ${@postService.getLikesCountForPost(post.idpost)}"></p>
-				<p><i class="fa-regular fa-comment"></i></p>
+				<button class="btn"> <i class="fa-regular fa-comment"></i> </button>
+				<textarea class="commentArea" cols="30" rows="5"></textarea>
 			</div>
 			
 			<div class="commentaire" th:each="comment : ${post.comments}">

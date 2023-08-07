@@ -61,3 +61,12 @@ main{
 .commentaire p{
 	margin: 1%;
 }
+
+.btn, .btn:focus{
+	border: none;
+	background-color: transparent;
+	outline: none;
+}
+.commentArea{
+	display: flex;
+}
