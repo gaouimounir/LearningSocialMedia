@@ -62,11 +62,15 @@ main{
 	margin: 1%;
 }
 
-.btn, .btn:focus{
+.btnComment, .btnComment:focus{
 	border: none;
 	background-color: transparent;
 	outline: none;
 }
-.commentArea{
+.commentAreaVisible{
 	display: flex;
+}
+
+.commentAreaCacher{
+	display: none;
 }

@@ -38,14 +38,15 @@
 			<div class="like">
 				<p><i class="fa-regular fa-heart"></i></p>
 				<p th:text=" ${@postService.getLikesCountForPost(post.idpost)}"></p>
-				<button class="btn"> <i class="fa-regular fa-comment"></i> </button>
-				<textarea class="commentArea" cols="30" rows="5"></textarea>
+				<button class="btnComment"> <i class="fa-regular fa-comment"></i> </button>
 			</div>
 			
 			<div class="commentaire" th:each="comment : ${post.comments}">
 				<p th:text=" ${@usersService.getUsers(comment.id_user).get().getUsername} + ':'"></p>
 		        <p th:text=" ${comment.text}"></p>
 		    </div>
+		    
+		    <textarea class="commentAreaCacher" cols="30" rows="5"></textarea>
 		    
 		</section>
 		
@@ -54,5 +55,7 @@
   </p>
   </main>
 </body>
+
+<script src="/JavaScript/script.js" th:href="@{/JavaScript/script.js}" />
 
 </html>
