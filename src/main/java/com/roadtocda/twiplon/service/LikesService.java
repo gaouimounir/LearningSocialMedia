@@ -35,6 +35,11 @@ public class LikesService {
 		return savedLikes;
 	}
 	
+	public void likeSave(int id_user, int idpost) {
+		Likes likeSaved = new Likes(id_user, idpost);
+		likesRepository.save(likeSaved);
+	}
+	
 	public long countLikesByPostId(Long postId) {
         return likesRepository.countByidpost(postId);
     }

@@ -26,6 +26,17 @@ public class Likes {
 	public Likes () {
 	}
 	
+	
+	
+	
+	public Likes(int id_user, int idpost) {
+		this.id_user = id_user;
+		this.idpost = idpost;
+	}
+
+
+
+
 	public int getId_user() {
 		return id_user;
 	}

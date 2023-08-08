@@ -20,6 +20,7 @@ package com.roadtocda.twiplon.controller;
 			Long postId = requestBody.get("postId");
 			likeService.likeSave(4, postId.intValue());
 		}
+	
 		
 	}
 
