@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+  <link rel="stylesheet" th:href="@{/css/styleConnexion.css}" />
+  <link rel="stylesheet" href="/src/main/resources/static/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+  <header>
+	  
+    <h1 class="titre-page">
+
+   		<p> <i class="fa-brands fa-twitter"></i> Twiplon </p>
+  </h1>
+    
+  </header>
+  
+  <main>
+	  
+	  <form class="form-connexion">
+	  
+	  <div class="title-connexion">
+		  <p>Se connecter</p>
+	  </div>
+	  
+	  <div class="info-connexion">
+		  <label for="utilisateur"> Utilisateur : <input type="text"></label>
+		  <br>
+		  <label for="password"> Mot de passe :  <input type="text"></label>
+	  </div>
+	  
+	  <div class="btn-connexion">
+		  <label for="check"><input type="submit" value="Connexion">
+	  </div>
+	  
+	  </form>
+    
+  </main>
+</body>
+
+<script src="/JavaScript/script.js" th:href="@{/JavaScript/script.js}" />
+
+</html>

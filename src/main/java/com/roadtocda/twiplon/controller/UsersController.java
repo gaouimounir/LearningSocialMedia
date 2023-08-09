@@ -15,11 +15,11 @@ public class UsersController {
 	@Autowired
 	private UsersService UsersService;
 	
-	@GetMapping("/Users")
+	@GetMapping("/connexion")
     public String Users(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
 		model.addAttribute("name", name);
 		model.addAttribute("LesUserss", UsersService.getUserss());
-        return "users";
+        return "connexion";
     }
 
 }

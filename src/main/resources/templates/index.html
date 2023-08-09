@@ -36,7 +36,8 @@
 		<section class="interaction">
 			
 			<div class="like">
-				<button class="btnLike"> <i class="fa-regular fa-heart"></i> </button>
+				
+				<button class="btnLike" th:data-idpost='|${post.idpost}|'><i class="fa-regular fa-heart"></i></button>
 				<p th:text=" ${@postService.getLikesCountForPost(post.idpost)}"></p>
 				<button class="btnComment"> <i class="fa-regular fa-comment"></i> </button>
 			</div>

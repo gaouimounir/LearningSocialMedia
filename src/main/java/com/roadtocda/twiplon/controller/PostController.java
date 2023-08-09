@@ -20,5 +20,6 @@ public class PostController {
 		model.addAttribute("LesPosts", PostService.getPosts());
         return "index";
     }
+	
 
 }
