@@ -22,6 +22,18 @@
   
   <main>
 	  
+	  <article class="card" th:each="users : ${LesUserss}">
+		
+    	<section class="intitule">
+			<p th:text=" ${users.username}"></p>
+			
+		</section>
+		
+		
+		
+		
+    </article>
+	  
     
   </main>
 </body>
