@@ -32,12 +32,22 @@ main{
 }
 
 .info-connexion{
-	border-bottom: solid;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	padding: 3%;
+}
+
+.info-connexion input{
+	width: 100%;
+}
+
+.btn-connexion{
+	border-top: solid;
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 
 .btn-connexion input{
