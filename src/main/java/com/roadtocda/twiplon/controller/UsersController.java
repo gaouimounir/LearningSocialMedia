@@ -16,10 +16,17 @@ public class UsersController {
 	private UsersService UsersService;
 	
 	@GetMapping("/connexion")
-    public String Users(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+    public String connexion(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
 		model.addAttribute("name", name);
 		model.addAttribute("LesUserss", UsersService.getUserss());
         return "connexion";
+    }
+	
+	@GetMapping("/inscription")
+    public String inscription(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+		model.addAttribute("name", name);
+		model.addAttribute("LesUserss", UsersService.getUserss());
+        return "inscription";
     }
 
 }
