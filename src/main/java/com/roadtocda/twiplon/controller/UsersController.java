@@ -28,6 +28,12 @@ public class UsersController {
 		model.addAttribute("LesUserss", UsersService.getUserss());
         return "inscription";
     }
+	@GetMapping("/profil")
+    public String profil(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+		model.addAttribute("name", name);
+		model.addAttribute("LesUserss", UsersService.getUsers(1));
+        return "profil";
+    }
 
 }
 
