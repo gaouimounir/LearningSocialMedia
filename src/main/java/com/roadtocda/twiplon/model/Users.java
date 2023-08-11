@@ -19,6 +19,7 @@ public class Users {
     private String username;
 	private String firstname;
     private String lastname;
+    private String password;
     
     @Column(columnDefinition = "DATE")
     private Timestamp datecreation;
@@ -27,6 +28,7 @@ public class Users {
  // Relation One-to-Many avec les publications (un utilisateur peut avoir plusieurs publications)
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Post> posts;
+    
     
     public Users() {
     }
@@ -49,6 +51,13 @@ public class Users {
 
 	public Timestamp getDatecreation() {
 		return datecreation;
+	}
+	
+	public List<Post> getPosts() {
+		return posts;
+	}
+	public String getPassword() {
+		return password;
 	}
 
 	public void setId_user(int id_user) {
@@ -73,5 +82,8 @@ public class Users {
 
 	public void setPosts(List<Post> posts) {
 		this.posts = posts;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }

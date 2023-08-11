@@ -48,8 +48,6 @@ public class PostService {
 		return null;
 	}
 	
-	public long foundPostsByUsersId(Long usersId) {
-        return postRepository.foundByid_users(usersId);
-    }
+	
 
 }
