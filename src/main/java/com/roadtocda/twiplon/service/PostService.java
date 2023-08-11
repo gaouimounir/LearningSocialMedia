@@ -47,8 +47,9 @@ public class PostService {
 	public Iterable<Post> getPost() {
 		return null;
 	}
-	public long getLikesCountForPost(Long postId) {
-        return likesService.countLikesByPostId(postId);
+	
+	public long foundPostsByUsersId(Long usersId) {
+        return postRepository.foundByid_users(usersId);
     }
 
 }

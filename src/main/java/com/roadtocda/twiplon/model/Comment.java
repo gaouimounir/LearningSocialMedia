@@ -31,6 +31,17 @@ public class Comment {
 		
 }
     
+    
+    
+	public Comment(int id_user, int idpost, String text, Post post) {
+	this.id_user = id_user;
+	this.idpost = idpost;
+	this.text = text;
+	this.post = post;
+}
+
+
+
 	public int getId_user() {
 		return id_user;
 	}
