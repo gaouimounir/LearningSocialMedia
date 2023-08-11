@@ -43,6 +43,10 @@ public class PostService {
 		Post savedPost = postRepository.save(Post);
 		return savedPost;
 	}
+	
+	public long getLikesCountForPost(Long postId) {
+		return likesService.countLikesByPostId(postId);
+	}
 
 	public Iterable<Post> getPost() {
 		return null;

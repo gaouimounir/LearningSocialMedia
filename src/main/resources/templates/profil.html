@@ -20,21 +20,30 @@
     
   </header>
   
-  <main>
-	  
-	  <article class="card" th:each="users : ${LesUserss}">
-		
-    	<section class="intitule">
-			<p th:text=" ${users.username}"></p>
-			
-		</section>
-		
-		
-		
-		
-    </article>
-	  
-    
+  <main class="main-profil">
+    <div class="card-profil">
+      <img src="/images/photo-profil.jpeg" alt="photo-profil">
+      <h3 th:text="${user.username}"></h3>
+      <div class="identity-profil">
+        <p th:text="${user.firstname}"></p>
+        <p th:text="${user.lastname}"></p>
+      </div>
+    </div>
+
+    <div class="post-profil" th:if="${userPosts}">
+      <div class="card" th:each="post: ${userPosts}">
+        <p class="post-date" th:text="${#dates.format(post.datecreation, 'dd/MM/yyyy')}"></p>
+        <p class="post-content" th:text="${post.content}"></p>
+        <div class="bot-card-post-profil">
+          <p class="count-like" th:text="${@postService.getLikesCountForPost(post.idpost)} + ' Likes'"></p>
+          <!-- <i class="fa-solid fa-trash" data-post-id="${post.idpost}" onclick="deletePost(this)"></i> -->
+          <form th:action="@{/deletePost}" method="post">
+            <input type="hidden" name="postId" th:value="${post.idpost}">
+            <button type="submit" class="delete-button"><i class="fa-solid fa-trash"></i></button>
+        </form>
+        </div>
+      </div>
+    </div>
   </main>
 </body>
 

@@ -36,7 +36,7 @@ public class UsersController {
         return "inscription";
     }
 	
-	@GetMapping("/Profil")
+	@GetMapping("/profil")
     public String Users(@RequestParam(name="id", required = true, defaultValue = "World") String name, Model model) {
         model.addAttribute("name", name);
         
@@ -48,7 +48,7 @@ public class UsersController {
         	Iterable<Post> userPosts = user.getPosts();
         	model.addAttribute("userPosts", userPosts);
         }
-        return "users";
+        return "profil";
     }
 
 }
