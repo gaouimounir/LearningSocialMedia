@@ -31,6 +31,7 @@ main{
 	margin-bottom: 2%;
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 }
 
 .card-profil p{
@@ -38,9 +39,6 @@ main{
 	font-size: 200%;
 }
 
-.identity-profil{
-	font-weight: lighter;
-}
 
 .intitule{
 	display: flex;
