@@ -31,7 +31,7 @@
     </div>
 
     <div class="post-profil" th:if="${userPosts}">
-      <div class="card" th:each="post: ${userPosts}">
+      <div th:each="post: ${userPosts}">
         <p class="post-date" th:text="${#dates.format(post.datecreation, 'dd/MM/yyyy')}"></p>
         <p class="post-content" th:text="${post.content}"></p>
         <div class="bot-card-post-profil">

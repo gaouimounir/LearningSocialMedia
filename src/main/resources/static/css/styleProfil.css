@@ -15,10 +15,10 @@ main{
 	align-items: center;
 }
 
-.card{
+.post-profil{
 	border: solid;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	background-color: mintcream;
 	width: 500px;
 	margin-bottom: 3%;
