@@ -18,7 +18,8 @@ main{
 .post-profil{
 	border: solid;
 	display: flex;
-	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 	background-color: mintcream;
 	width: 1100px;
 	margin-bottom: 3%;
@@ -52,6 +53,7 @@ main{
 .card{
 	border: solid;
 	margin: 2%;
+	width: 25%;
 }
 .post{
 	display: flex;
