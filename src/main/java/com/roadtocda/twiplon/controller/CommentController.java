@@ -20,6 +20,6 @@ public class CommentController {
 	public void Comments(@RequestBody Map <String, String> requestBody) {
 		String commentId = requestBody.get("commentId");
 		String textComment = requestBody.get("textcomment");
-		commentService.commentSave(3, Integer.parseInt(commentId), textComment);
+		commentService.commentSave(5, Integer.parseInt(commentId), textComment);
 	}
 }

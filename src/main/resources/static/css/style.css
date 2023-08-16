@@ -65,6 +65,11 @@ main{
 	flex-direction: row;
 }
 
+.btnLike{
+	border: none;
+	background-color: transparent;
+}
+
 .like p{
 	margin: 1%;
 }
