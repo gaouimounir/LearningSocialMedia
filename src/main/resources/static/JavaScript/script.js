@@ -21,16 +21,48 @@ document.querySelectorAll(".fa-heart").forEach((heartChange) => {
 });
 
 
+ 
+
 
 /*------------------*/
 
-let myComment = document.querySelector("textarea");
-let myCommentButton = document.querySelector(".btnComment");
+const btnsComment = document.querySelectorAll(".btnComment");
+btnsComment.forEach((btnComment) => {
+  const textComment =
+    btnComment.parentElement.parentElement.querySelector(".commentAreaCacher");
+  const btnCommenter =
+    btnComment.parentElement.parentElement.querySelector(".commenter");
+  let isCommentVisible = false;
 
-myCommentButton.addEventListener("click", function () {
-  if ("commentAreaCacher" == myComment.getAttribute("class")) {
-    myComment.setAttribute("class", "commentAreaVisible");
-  } else {
-    myComment.setAttribute("class", "commentAreaCacher");
-  }
+  btnComment.addEventListener("click", function () {
+    console.log(btnComment);
+    if (isCommentVisible) {
+      textComment.style.display = "none";
+      btnCommenter.style.display = "none";
+    } else {
+      textComment.style.display = "flex";
+      btnCommenter.style.display = "flex";
+    }
+    isCommentVisible = !isCommentVisible;
+  });
+
+  btnCommenter.addEventListener("click", function () {
+    console.log(btnCommenter);
+    btnCommenter.style.display = "none";
+    textComment.style.display = "none";
+
+    const postId = btnCommenter.dataset.idcomment;
+    const commentText = textComment.value;
+
+    fetch("/commentaire", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        commentId: postId,
+        textcomment: commentText,
+      }),
+    }).then((response) => response.json());
+  });
 });

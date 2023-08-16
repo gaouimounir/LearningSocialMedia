@@ -47,8 +47,11 @@
 		        <p th:text=" ${comment.text}"></p>
 		    </div>
 		    
-		    <textarea class="commentAreaCacher" cols="30" rows="5"></textarea>
+		    <div class="commentAreaCacher">
+			<textarea cols="30" rows="5"></textarea>
 		    <button class="commenter" th:data-idcomment='|${post.idpost}|'>Commenter</button>
+			</div>
+		   
            
 		    
 		</section>
