@@ -42,12 +42,14 @@
 				<button class="btnComment"> <i class="fa-regular fa-comment"></i> </button>
 			</div>
 			
-			<div class="commentaire" th:each="comment : ${post.comments}">
+			<div class="commentaire" th:each="comment : ${post.comments}" th:attr="data-post-id=${post.idpost}">
 				<p th:text=" ${@usersService.getUsers(comment.id_user).get().getUsername} + ':'"></p>
 		        <p th:text=" ${comment.text}"></p>
 		    </div>
 		    
 		    <textarea class="commentAreaCacher" cols="30" rows="5"></textarea>
+		    <button class="commenter" th:data-idcomment='|${post.idpost}|'>Commenter</button>
+           
 		    
 		</section>
 		
