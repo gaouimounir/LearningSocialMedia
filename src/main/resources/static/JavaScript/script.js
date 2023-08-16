@@ -61,7 +61,7 @@ btnsComment.forEach((btnComment) => {
       },
       body: JSON.stringify({
         commentId: postId,
-        textcomment: commentText,
+        textComment: commentText,
       }),
     }).then((response) => response.json());
   });
