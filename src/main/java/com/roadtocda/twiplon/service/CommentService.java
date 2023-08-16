@@ -36,8 +36,9 @@ public class CommentService {
 		return savedComment;
 	}
 
-	public Iterable<Comment> getComment() {
-		return null;
+	public void commentSave(int id_user, int idpost, String text) {
+		Comment commentSaved = new Comment(id_user, idpost, text);
+		commentRepository.save(commentSaved);
 	}
 	
 	//-----------------

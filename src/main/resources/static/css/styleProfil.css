@@ -40,7 +40,7 @@ main{
 .post-profil{
 	border: solid;
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: wrap-reverse;
 	justify-content: center;
 	background-color: mintcream;
 	width: 1000px;
