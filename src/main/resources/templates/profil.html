@@ -33,10 +33,10 @@
     <div class="post-profil" th:if="${userPosts}">
 		
       <div class="card" th:each="post: ${userPosts}">
-        <p class="post-date" th:text="${#dates.format(post.datecreation, 'dd/MM/yyyy')}"></p>
-        <p class="post-content" th:text="${post.content}"></p>
+        <p class="intitule" th:text="${#dates.format(post.datecreation, 'dd/MM/yyyy')}"></p>
+        <p class="post" th:text="${post.content}"></p>
         
-        <div class="bot-card-post-profil">
+        <div class="interaction">
           <p class="count-like" th:text="${@postService.getLikesCountForPost(post.idpost)} + ' Likes'"></p>
           <!-- <i class="fa-solid fa-trash" data-post-id="${post.idpost}" onclick="deletePost(this)"></i> -->
           
