@@ -7,29 +7,28 @@
 	border-bottom: solid;
 	margin-bottom: 5%;
 	padding: 2%;
+	margin:0;
+	background-color: rgb(0, 213, 113);
 }
 
 main{
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	flex-direction: row;
+	align-items: flex-start;
 	width: 1450px;
-	border: solid;
 	margin: 2%;
-	background-color: cornflowerblue;
 }
 
 .card-profil{
 	border: solid;
 	border-radius: 5%;
 	width: 20%;
-	margin-bottom: 2%;
+	margin: 2%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	background-color: skyblue;
+	background-color: rgb(0, 213, 113);
 }
 
 .card-profil p{
@@ -43,7 +42,7 @@ main{
 	flex-wrap: wrap-reverse;
 	justify-content: center;
 	background-color: mintcream;
-	width: 1000px;
+	width: 100%;
 	margin-bottom: 3%;
 }
 
@@ -59,11 +58,9 @@ main{
 
 .card{
 	border: solid;
+	border-radius: 4%;
 	margin: 2%;
 	width: 25%;
+	background-color: rgb(0, 213, 113);
 }
-.post{
-	display: flex;
-	justify-content: center;
-	padding: 6%;
-}
+
