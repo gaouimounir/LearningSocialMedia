@@ -18,16 +18,16 @@ public class CommentController {
 	@Autowired
 	private CommentService commentService;
 	
-	@PostMapping("/commentaire")
+	/*@PostMapping("/commentaire")
 	public void Comments(@RequestBody Map <String, String> requestBody) {
 		String commentId = requestBody.get("commentId");
-		String textComment = requestBody.get("textcomment");
-		commentService.commentSave(5, Integer.parseInt(commentId), textComment);
-	} 
+		String textComment = requestBody.get("textComment");
+		commentService.commentSave(7, Integer.parseInt(commentId), textComment);
+	} */
 	
-	/* @PostMapping("/commentaire")
+	 @PostMapping("/commentaire")
 	    public ResponseEntity<String> addComment(@RequestParam int id_user, @RequestParam int idpost, @RequestParam String text) {
 	        commentService.commentSave(5, idpost, text);
 	        return ResponseEntity.ok("Comment added successfully");
-	    } */
+	    } 
 }
