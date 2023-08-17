@@ -37,12 +37,10 @@ main{
 }
 
 .post-profil{
-	border: solid;
 	display: flex;
 	flex-wrap: wrap-reverse;
 	justify-content: center;
 	width: 100%;
-	margin-bottom: 3%;
 }
 
 .card{
@@ -60,6 +58,7 @@ main{
 	border-bottom: solid;
 	width: 100%;
 	padding: 2%;
+	margin-bottom: 0;
 }
 
 .post{
@@ -67,6 +66,7 @@ main{
 	justify-content: center;
 	padding: 6%;
 	background-color: white;
+	margin-bottom: 0%;
 }
 
 .interaction{
@@ -75,5 +75,10 @@ main{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	margin: 0;
+}
+.delete-button{
+	background-color: transparent;
+	border: none;
 }
 
