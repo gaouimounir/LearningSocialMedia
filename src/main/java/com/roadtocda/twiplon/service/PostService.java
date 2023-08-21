@@ -61,7 +61,9 @@ public class PostService {
 		return postRepository.findAll();
 	}
 	
-	
+	public Iterable<Post> getPostsSortedByDateDesc() {
+        return postRepository.findAllByOrderByDatecreationDesc();
+    }
 	
 
 }
