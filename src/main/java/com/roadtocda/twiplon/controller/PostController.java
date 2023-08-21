@@ -36,7 +36,7 @@ public class PostController {
 	    newPost.setDatecreation(Timestamp.valueOf(LocalDateTime.now()));
 	    
 	    Users user = new Users();
-	    user.setId_user(19);
+	    user.setId_user(5);
 	    newPost.setUser(user);
 	    
 	    PostService.savePost(newPost);

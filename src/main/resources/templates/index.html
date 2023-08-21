@@ -22,6 +22,13 @@
   
   <main>
 	  
+	  <form action="/addPost" method="post">
+            <input type="hidden" name="userId" value="19"> <!-- Remplacez 19 par l'ID de l'utilisateur actuel -->
+            <textarea name="newPostContent" rows="1" cols="50"></textarea>
+            <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+	  
+	  
     <article class="card" th:each="post : ${LesPosts}">
 		
     	<section class="intitule">
