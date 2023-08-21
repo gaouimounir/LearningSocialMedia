@@ -1,4 +1,8 @@
-
+header a{
+	color: red;
+	text-decoration: none;
+	
+}
 
 .titre-page{
 	display: flex;
@@ -29,6 +33,10 @@ main{
 	align-items: center;
 	justify-content: space-between;
 	background-color: rgb(0, 213, 113);
+}
+
+.card-profil img{
+	width: 100%;
 }
 
 .card-profil p{
