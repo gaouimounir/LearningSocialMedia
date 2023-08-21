@@ -19,6 +19,13 @@ main{
 	margin: 2%;
 }
 
+main form{
+	display: flex;
+	flex-direction: row;
+	border: solid;
+	border-color: rgb(0, 213, 113);
+}
+
 .card{
 	border: solid;
 	border-radius: 4%;
