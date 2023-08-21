@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.roadtocda.twiplon.model.Post;
+import com.roadtocda.twiplon.model.Users;
 import com.roadtocda.twiplon.repository.CommentRepository;
 import com.roadtocda.twiplon.repository.LikesRepository;
 import com.roadtocda.twiplon.repository.PostRepository;
@@ -48,9 +49,13 @@ public class PostService {
 		return likesService.countLikesByPostId(postId);
 	}
 
-	public Iterable<Post> getPost() {
-		return null;
-	}
+	
+	public Iterable<Post> getUserPostsSortedByDateDesc(int id_user) {
+        Users user = new Users();
+        user.setId_user(id_user);
+        return postRepository.findByUserOrderByDatecreationDesc(user);
+    }
+	
 	
 	
 
