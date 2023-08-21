@@ -1,5 +1,6 @@
 package com.roadtocda.twiplon.service;
 
+import java.security.Timestamp;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,6 +56,10 @@ public class PostService {
         user.setId_user(id_user);
         return postRepository.findByUserOrderByDatecreationDesc(user);
     }
+	
+	public Iterable<Post> getDatecreation(final Timestamp datecreation){
+		return postRepository.findAll();
+	}
 	
 	
 	
