@@ -24,7 +24,7 @@ public class PostController {
 	@GetMapping("")
     public String Post(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
 		model.addAttribute("name", name);
-		model.addAttribute("LesPosts", PostService.getPosts());
+		model.addAttribute("LesPosts", PostService.getPostsSortedByDateDesc());
         return "index";
     }
 	
